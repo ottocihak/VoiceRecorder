@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Voice Recorder</string>
+    <string name="title_activity_main">Voice Recorder</string>
+    <string name="first_fragment_label">Voice Recorder</string>
+</resources>
