@@ -67,7 +67,7 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         View.OnClickListener listener = new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
+            @RequiresApi(api = Build.VERSION_CODES.BASE)
             @Override
             public void onClick(View view) {
                 switch (view.getId()){
@@ -78,7 +78,7 @@ public class MainFragment extends Fragment {
                             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
                             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
                             newFile();
-                            mediaRecorder.setOutputFile(fileName);
+                            mediaRecorder.setOutputFile(fileName.getAbsolutePath());
                             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
                             try {
